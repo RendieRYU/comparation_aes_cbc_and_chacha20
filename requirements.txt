@@ -2,3 +2,4 @@ numpy>=1.23
 Pillow>=9.5
 cryptography>=41.0
 opencv-python>=4.7
+matplotlib>=3.7
