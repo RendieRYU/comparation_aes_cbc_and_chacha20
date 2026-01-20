@@ -21,24 +21,24 @@ Diagram alur kerja end-to-end (Mermaid):
 
 ```mermaid
 flowchart LR
-  A[Input Image] --> KAES[AES-CBC Encrypt]
-  A --> KCH[ChaCha20 Encrypt]
+  A[Input Image] --> KAES[AES-CBC Encrypt];
+  A --> KCH[ChaCha20 Encrypt];
 
-  KAES --> CAES[Cipher Image (AES)]
-  KCH --> CCH[Cipher Image (ChaCha20)]
+  KAES --> CAES[Cipher Image - AES];
+  KCH --> CCH[Cipher Image - ChaCha20];
 
-  CAES --> MAES[MSE · PSNR · SSIM · CC]
-  CCH --> MCH[MSE · PSNR · SSIM · CC]
+  CAES --> MAES[MSE · PSNR · SSIM · CC];
+  CCH --> MCH[MSE · PSNR · SSIM · CC];
 
-  A --> D[NPCR · UACI · Adj H/V/D]
+  A --> D[NPCR · UACI · Adj H/V/D];
 
-  MAES --> CMP[Perbandingan]
-  MCH --> CMP
-  D --> CMP
+  MAES --> CMP[Perbandingan];
+  MCH --> CMP;
+  D --> CMP;
 
-  CMP --> OUT[Outputs + Metadata]
-  CMP --> GUI[GUI: Preview + Histogram]
-  CMP --> CLI[CLI: Analisis via argumen]
+  CMP --> OUT[Outputs and Metadata];
+  CMP --> GUI[GUI: Preview · Histogram];
+  CMP --> CLI[CLI: Analisis via argumen];
 ```
 
 Struktur artefak output:
