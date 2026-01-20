@@ -27,10 +27,10 @@ flowchart LR
   KAES --> CAES[Cipher Image (AES)]
   KCH --> CCH[Cipher Image (ChaCha20)]
 
-  CAES --> MAES[MSE | PSNR | SSIM | CC]
-  CCH --> MCH[MSE | PSNR | SSIM | CC]
+  CAES --> MAES[MSE · PSNR · SSIM · CC]
+  CCH --> MCH[MSE · PSNR · SSIM · CC]
 
-  A --> D[NPCR | UACI | Adj H/V/D]
+  A --> D[NPCR · UACI · Adj H/V/D]
 
   MAES --> CMP[Perbandingan]
   MCH --> CMP
@@ -93,7 +93,7 @@ Luncurkan GUI untuk menjalankan analisis secara interaktif:
 ```bash
 python -m gui.app
 ```
-Di GUI Anda dapat:
+Di GUI terdapat:
 - Memilih citra dan folder output.
 - Memilih algoritma (AES-CBC atau ChaCha20).
 - Mengatur password dan jumlah pengulangan.
